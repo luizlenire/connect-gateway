@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Api</name>
+    </assembly>
+    <members>
+        <member name="M:Api.Controllers.AuthenticationController.GenerateToken(Api.AppCore.SISS_Integration.Models.ConnectLogin)">
+             <summary>
+             Método para gerar o token de acesso aos métodos da API.
+             </summary>
+             <remarks>
+             Exemplo:
+            {
+            "Username":"usertest",
+            "Password":"passtest"
+            }
+             </remarks>
+             <returns>Retornará um token para ser informado em cada método da API, sem ele, o acesso será negado.</returns>
+             <response code="200">Token gerado com sucesso.</response>
+             <response code="400">Usuário/senha inválidos.</response>     
+                   
+        </member>
+        <member name="M:Api.Controllers.BankController.Get(System.String)">
+            <summary>
+            Obtenção de dados de banco de acordo com o código informado.
+            </summary>
+            <remarks>
+            Exemplo: ../bank/get
+            </remarks>
+            <returns>Objeto contendo um detalhamento dos dados inseridos, um objeto sucesso e um objeto com uma mensagem com o descritivo de toda a operação realizada.</returns>
+            <response code="200">Retorno com sucesso, no objeto de retorno, informações referente a toda a operação.</response>
+            <response code="400">Em caso de reprovação, retornará um objeto descrevendo qual foi o motivo da reprovação.</response>   
+        </member>
+        <member name="M:Api.Controllers.BankController.Get">
+            <summary>
+            Obtenção de lista de dados de bancos.
+            </summary>
+            <remarks>
+            Exemplo: ../bank/get-list
+            </remarks>
+            <returns>Objeto contendo um detalhamento dos dados inseridos, um objeto sucesso e um objeto com uma mensagem com o descritivo de toda a operação realizada.</returns>
+            <response code="200">Retorno com sucesso, no objeto de retorno, informações referente a toda a operação.</response>
+            <response code="400">Em caso de reprovação, retornará um objeto descrevendo qual foi o motivo da reprovação.</response>   
+        </member>
+        <member name="M:Api.Controllers.CepController.Get(System.String,System.String)">
+            <summary>
+            Obtenção de dados de endereço de acordo com o CEP informado, em caso de maior precisão, poderá ser informado o número.
+            </summary>
+            <remarks>
+            Exemplo: ../cep/get
+            </remarks>
+            <returns>Objeto contendo um detalhamento dos dados inseridos, um objeto sucesso e um objeto com uma mensagem com o descritivo de toda a operação realizada.</returns>
+            <response code="200">Retorno com sucesso, no objeto de retorno, informações referente a toda a operação.</response>
+            <response code="400">Em caso de reprovação, retornará um objeto descrevendo qual foi o motivo da reprovação.</response>   
+        </member>
+        <member name="M:Api.Controllers.DddController.Get(System.String)">
+            <summary>
+            Obtenção de dados de cidades de acordo com o DDD informado.
+            </summary>
+            <remarks>
+            Exemplo: ../ddd/get
+            </remarks>
+            <returns>Objeto contendo um detalhamento dos dados inseridos, um objeto sucesso e um objeto com uma mensagem com o descritivo de toda a operação realizada.</returns>
+            <response code="200">Retorno com sucesso, no objeto de retorno, informações referente a toda a operação.</response>
+            <response code="400">Em caso de reprovação, retornará um objeto descrevendo qual foi o motivo da reprovação.</response>   
+        </member>
+        <member name="M:Api.Controllers.DddController.Get">
+            <summary>
+            Obtenção de dados de cidades relacionadas aos DDD's disponíveis.
+            </summary>
+            <remarks>
+            Exemplo: ../ddd/get-list
+            </remarks>
+            <returns>Objeto contendo um detalhamento dos dados inseridos, um objeto sucesso e um objeto com uma mensagem com o descritivo de toda a operação realizada.</returns>
+            <response code="200">Retorno com sucesso, no objeto de retorno, informações referente a toda a operação.</response>
+            <response code="400">Em caso de reprovação, retornará um objeto descrevendo qual foi o motivo da reprovação.</response>   
+        </member>
+        <member name="M:Api.Controllers.EmailController.Send(Api.AppCore.Email.Models.SendEmail)">
+            <summary>
+            Método responsável por disparar todos os e-mails de origem do Siss Connect.
+            </summary>
+            <remarks>
+            Exemplo: ../email/send
+            {
+               "Subject": "Saúde CFM - Código de autenticação",
+               "Body": "Segue o seu código de autenticação para acesso ao aplicativo: 57144 Este é um e-mail automático, favor não responder!",
+               "Recipient": "luiz.filho@tecnogroup.com.br"
+            }
+            </remarks>
+            <returns>Objeto contendo um detalhamento dos dados inseridos, um objeto sucesso e um objeto com uma mensagem com o descritivo de toda a operação realizada.</returns>
+            <response code="200">Retorno com sucesso, no objeto de retorno, informações referente a toda a operação.</response>
+            <response code="400">Em caso de reprovação, retornará um objeto descrevendo qual foi o motivo da reprovação.</response>   
+        </member>
+        <member name="M:Api.Controllers.LegalPersonController.Get(System.String)">
+            <summary>
+            Obtenção de dados de pessoa jurídica de acordo com o CNPJ informado.
+            </summary>
+            <remarks>
+            Exemplo: ../legalperson/get
+            </remarks>
+            <returns>Objeto contendo um detalhamento dos dados inseridos, um objeto sucesso e um objeto com uma mensagem com o descritivo de toda a operação realizada.</returns>
+            <response code="200">Retorno com sucesso, no objeto de retorno, informações referente a toda a operação.</response>
+            <response code="400">Em caso de reprovação, retornará um objeto descrevendo qual foi o motivo da reprovação.</response>   
+        </member>
+    </members>
+</doc>
